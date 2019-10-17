@@ -11,28 +11,25 @@ void setup() {
   woohoo = minim.loadSample("woohoo.wav"); //drag and drop from project onto sketch } 
 }
 
-void draw() {
-      // Use this print statement to find out the coordinates of Waldo
-      println("X: " + mouseX + " Y: " + mouseY); 
-
-      // If the mouse is on Waldo, print “Waldo found!”
-if(mousePressed){
-}
-if (mouseX.equals 200){
-}
-
-      // If Waldo is found, also use the method below to play “Woohoo”
-      // Change the name of the sound file if you need to 
-      // If the mouse is pressed and they’re not on Waldo, play “Doh”
-      // Change the name of the sound file if you need to 
+void draw(){
+  if(mousePressed){
+    println("X: " + mouseX + " Y: " + mouseY);
+    if ((mouseX> 190) && (mouseX < 230) && (mouseY>169) && (mouseY<223)){
+      println("waldo found");
+      playWoohoo();
+    }
+    else{
+      playDoh();
+    }
+  }
 }
 
-void playWoohoo() {
-     woohoo.stop();
-     woohoo.trigger();
+void playWoohoo(){
+  woohoo.stop();
+  woohoo .trigger();
 }
 
-void playDoh() {
-     doh.stop();
-     doh.trigger();
+void playDoh(){
+  doh.stop();
+  doh.trigger();
 }
