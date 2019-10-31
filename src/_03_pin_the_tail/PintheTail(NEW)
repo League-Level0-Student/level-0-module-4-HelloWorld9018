@@ -1,0 +1,63 @@
+    int a = mouseX;
+  int b = mouseY;
+import ddf.minim.*;
+Minim minim = new Minim(this); 
+AudioSample doh;
+AudioSample woohoo;
+PImage donkey;
+PImage tail;
+void setup(){
+  size(550, 406);
+  donkey = loadImage("donkey.jpg");
+  tail = loadImage ("tail.png");
+  tail.resize(80, 80);
+  doh = minim.loadSample("homer-doh.wav");
+  woohoo = minim.loadSample("homer-woohoo.wav");
+  
+
+}
+
+
+void draw(){
+
+ // a=mouseX;
+//  b=mouseY;
+
+  println("X: " + mouseX + "    Y: " + mouseY);
+  background (donkey);
+  image (tail, mouseX, mouseY);
+
+
+  rect(0, 0, 30, 30);
+
+  rect(490, 130, 30, 30);
+
+ // if (dist(0, 0, mouseX, mouseY) > 30){
+  // background(0, 0, 0);
+  //}
+
+   if (mousePressed){
+     a = mouseX;
+     b = mouseY;
+
+   }
+    image (tail, a, b);
+
+  if (dist(490, 130, a, b) < 15 ){
+    println("hi");
+    playWoohoo();
+   
+    
+  }
+
+  }
+  
+  void playWoohoo() {
+     woohoo.stop();
+     woohoo.trigger();
+}
+
+void playDoh() {
+     doh.stop();
+     doh.trigger();
+}
