@@ -1,0 +1,12 @@
+void setup(){
+  size(600, 500);
+    PImage minecraft = loadImage("greenbackground.png");     //in setup method
+minecraft.resize(width, height);          //in setup method
+background(minecraft);          //in setup method
+}
+
+
+void draw(){
+
+  
+}
