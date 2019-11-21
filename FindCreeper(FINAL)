@@ -1,0 +1,53 @@
+import javax.swing.JOptionPane;
+
+int a;
+int b;
+int c;
+
+int X = (int)random(0,600);
+int Y = (int)random(0,500);
+PImage creeper;  
+PImage minecraft;
+void setup(){
+  size(600, 500);
+     minecraft = loadImage("greenbackground.png");     //in setup method
+minecraft.resize(width, height);          //in setup method
+         //in setup method
+   //at the top of your program
+creeper=loadImage("creep.png"); 
+creeper.resize(25, 35);//in setup method
+     //in draw method
+
+}
+
+
+void draw(){
+  background(minecraft); 
+  image(creeper, X, Y);
+  if (mousePressed){
+    fill(a, b, c);
+    ellipse(mouseX, mouseY, 20, 20);
+  
+   //boolean isNear(int a, int b) {
+if (dist (mouseX, mouseY, X +10, Y+10) <= 20 ){
+  a=0;
+  b=225;
+  c= 0;
+   println("Congrugulations, you found the creeper!");
+}
+ 
+  else if (dist (mouseX, mouseY, X+10, Y+10) <= 120 && dist (mouseX, mouseY, X+10, Y+10) >20){
+  a=225;
+  b=140;
+  c= 0;
+}
+else{
+  a=225;
+  b=0;
+  c=0;
+}
+   //  return true;
+//else
+  //   return false;
+}
+  }
