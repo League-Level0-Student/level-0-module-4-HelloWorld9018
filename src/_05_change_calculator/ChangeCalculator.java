@@ -30,7 +30,7 @@ double C = Integer.parseInt(c)*.25;
 		// Calculate how much money the user has and save it in a double variable 
 double Total = A + B + C;
 		// Tell the user how much money they have
-System.out.println(Total);
+System.out.println("You have " + Total + " dollars.");
 	}
 
 	
