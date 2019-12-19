@@ -25,8 +25,18 @@ for(int i = 0; i<hi.length(); i++) {
 	System.out.println(hi.charAt(i));
 	
 }
-for(int i = 0; i<hi.length(); i++)
-		if(hi.charAt(i) == 'b');
+for(int a = 0; a<hi.length(); a++) {
+	if(hi.charAt(a) == 'b'){
+		System.out.println("Character 'b' is at index " + a);
+	}
+}
+
+	/*if(hi.contains("bias")){
+		System.out.println("'bias' found!");
+	}*/
+
+		
+	
 		// 5. Pick a char inside your String, and use a loop to determine
 		//    what position/index in the String the char is located.
 		//    Print the char's position to the console.
